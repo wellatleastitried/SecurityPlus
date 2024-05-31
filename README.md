@@ -5,7 +5,7 @@ In social engineering, there are many different forms of attacks. These specific
 ### Phishing Attacks
 Phishing is a broad term used to describe **an attacker sending a text or email containing a link that tries to coerce the user into entering personal information for the attacker to steal**. When dealing with possible phishing attacks, it is important to be on the lookout for the following things:
   - Graphics that are slightly "off"
-  - Pretexting: An attacker trying to create a situation that will coerce you into clicking the link. (Your debit card has been charged $500! Click this link to contest the payment.)
+  - Pretexting: An attacker trying to create a situation that will coerce you into clicking the link. ("Your debit card has been charged $500! Click this link to contest the payment.")
   - Use of typosquatting: An attacker using www[.]google[.]con instead of www[.]google[.]com
   - Email header: Ensure the person that has sent the email is known or from a trusted background.
 ### Pharming Attacks
