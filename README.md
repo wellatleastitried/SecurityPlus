@@ -87,7 +87,7 @@ One of the biggest mistakes that can be made when configuring a server is to hav
 ### AI Data Poisoning
   - Tainted Traning Data for Machine Learning: AI systems "learn" based on data retrieved from customer systems and security devices like honeypots. By injecting code or traffic into the training environment, an attacker can corrupt the learning process, therefore rendering the AI software skewed.
   - Machine Learning Algorithms: Machine learning algorithms can be targeted the same as others.
-### 3^rd^ Party Attacks
-  - Supply Chain: Compromising elements of a system provided by another party. For example, if the processor is compromised at the vendor, then the system will never be secure. Could also exploit 3^rd^ party access to a system or environment.
+### 3<sup>rd</sup> Party Attacks
+  - Supply Chain: Compromising elements of a system provided by another party. For example, if the processor is compromised at the vendor, then the system will never be secure. Could also exploit 3<sup>rd</sup> party access to a system or environment.
   - Cloud-based Attacks: Attacks at the CSP itself or protocols/apps/accounts used to access and transmit data to and from CSPs
   - Poorly written APIs are a common target as well
