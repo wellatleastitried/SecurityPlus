@@ -91,3 +91,10 @@ One of the biggest mistakes that can be made when configuring a server is to hav
   - Supply Chain: Compromising elements of a system provided by another party. For example, if the processor is compromised at the vendor, then the system will never be secure. Could also exploit 3<sup>rd</sup> party access to a system or environment.
   - Cloud-based Attacks: Attacks at the CSP itself or protocols/apps/accounts used to access and transmit data to and from CSPs
   - Poorly written APIs are a common target as well
+### Cryptographic Attacks
+  - Collision Attack: Attempting to create a cryptographic collision to identify another series of characters that will produce the same hash as the legitimate password.
+  - Birthday Attacks: Attempts to cause a collision based on the fact that that it is mathematically infeasible to cause a collision with a specific hash, and that it is more likely to find two hashes that just happen to match. Again, mathematically infeasible but more probable.
+  - Downgrade Attacks: Requests access to the server at a lower level of security than the default in hopes that passwords would be transmitted in a less secure manner.
+### Pass the Hash
+Password hashes are stored in protective memory on our systems. There could be numerous hashes stored in the memory, for example, the current user, remote users, or service accounts. If these hashes are accessed by an attacker (who would need root privileges to do so), the attacker may be able to exploit the SSO authentication to use the hashes elsewhere to authenticate. It is important that users should not have debug privileges or be administrators (root) on their local machines.
+## Indicators for Application Attacks
