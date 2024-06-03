@@ -63,3 +63,31 @@ Prepending, in the context of spam and phishing, is when the sender adds informa
   - Rootkit: Operates at executive level (root or administrator depending on OS) or can be used to escalate privileges
 ### Ransomware
 Computer-based attack that allows the attacker to extort money from the target. Usually displays a message on the compromised machine telling the target to pay a specified sum of money to fix their compromised machine. These attacks use cryptomalware, which encrypts critical systems or files and requires the user to pay a fee or ransom in exchange for the key to decrypt their data.
+### Logic and Time Bombs
+**Not all malware runs immediately**
+  - Time Bombs wait until a specific date or time to unleash their payload
+  - Logic bombs wait until a specified event, such as the tenth time a file is accessed, before delivering the payload
+### Spyware
+Malware used to track the activity of users
+  - Tracking cookies: Plain text files stored on the user's machine that can record pages visited, purchases made, shopping cart contents, search queries, etc., often used in conjunction with adware
+  - Adware: Often reconfigures browsers to target market to an individual based on previous activities. May reconfigure browser to load ad-filled home page
+  - Keylogger: Records keystrokes on the target machine
+### Password Attacks
+  - Dictionary: Guesses every word in a specified file
+  - Brute Force: Guesses every combination of the specified characters
+  - Hybrid: Guesses every word in a file plus some frequently used character combinations
+  - Rainbow Table: Stored results from a brute force attack matched against the password hash. **Much** faster than running the brute force attack itself.
+  - Spraying: Attempting a common password like "Password123" to numerous accounts
+One of the biggest mistakes that can be made when configuring a server is to have plaintext/unencrypted databases or protocols. This can lead to passwords and other critical data being leaked. Having secure passwords is something that can be easily accomplished, but humans are lazy and often opt for the passwords that are easier to remember.
+### Physical Security Threats
+  - Malicious USB Cables: Can act as a skimmer over legitimate charging stations at public locations such as airports
+  - Flash Drives: Can provide the means to distribute malware, as well as to remove sensitive information from the machine they are plugged into
+  - Card Cloning: Making mulitple copies of an existing card
+  - Skimming: Installing a counterfeit card reader over a legitimate device
+### AI Data Poisoning
+  - Tainted Traning Data for Machine Learning: AI systems "learn" based on data retrieved from customer systems and security devices like honeypots. By injecting code or traffic into the training environment, an attacker can corrupt the learning process, therefore rendering the AI software skewed.
+  - Machine Learning Algorithms: Machine learning algorithms can be targeted the same as others.
+### 3^rd^ Party Attacks
+  - Supply Chain: Compromising elements of a system provided by another party. For example, if the processor is compromised at the vendor, then the system will never be secure. Could also exploit 3^rd^ party access to a system or environment.
+  - Cloud-based Attacks: Attacks at the CSP itself or protocols/apps/accounts used to access and transmit data to and from CSPs
+  - Poorly written APIs are a common target as well
