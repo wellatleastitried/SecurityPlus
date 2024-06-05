@@ -1,5 +1,5 @@
 # Security+ Study Guide
-This study guide is something that I threw together while studying for the CompTIA Security+ certification. I did my best to try and include every topic that is important to know before taking the certification exam.
+This study guide is something that I threw together while studying for the CompTIA Security+ certification. While there are examples provided for some of the concepts mentioned, this guide is primarily just definitions. I did my best to try and include every topic that is important to know before taking the certification exam.
 ## Social Engineering
 In social engineering, there are many different forms of attacks. These specific types of attacks are a non-technical way of gaining access to resources that would otherwise be unobtainable (often times through impersonation). Social Engineering is responsible for around 90% of all data breaches in corporations. There are many different types of social engineering attacks but the primary ones that are important to be wary of are as follows:
 ### Phishing Attacks
