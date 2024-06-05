@@ -98,3 +98,46 @@ One of the biggest mistakes that can be made when configuring a server is to hav
 ### Pass the Hash
 Password hashes are stored in protective memory on our systems. There could be numerous hashes stored in the memory, for example, the current user, remote users, or service accounts. If these hashes are accessed by an attacker (who would need root privileges to do so), the attacker may be able to exploit the SSO authentication to use the hashes elsewhere to authenticate. It is important that users should not have debug privileges or be administrators (root) on their local machines.
 ## Indicators for Application Attacks
+### Code Injection
+Input validatoin and sanitization are vital in applications. Weak handling of inputs can lead to:
+  - SQL Injection
+  - DLL Injection
+  - LDAP Injection
+  - XML Injection
+  - XSS (Cross-site Scripting) Attacks: Stored, Reflected/Non-persistent, Dom-based
+  - XSRF (Cross-site Request Forgery)
+  - Timing Attacks
+  - Buffer/Integer Overflows
+  - Memory Leaks
+### Cross-Site Attacks
+Steps with example scenarios:
+#### Cross-Site Scripting (XSS)
+Takes advantage of a user's trust in a website.\
+Steps of Persistent XSS Attack:
+  - Adversary finds a site vulnerable to script injection
+  - Adversary injects site with malicious script that steals user's session cookies
+  - User activates malicious script each time they access the site
+  - User's session cookie is sent to the adversary\
+Steps of Reflective XSS Attack (Non-Persistent):
+  - Adversary sends URL with malicious string to user
+  - User tricked into opening link and requesting malicious URL from site
+  - Site includes malicious string in its response to user
+  - User's browser interprets malicious script as part of the legitimate webpage and executes the code\
+#### Cross-Site Request Forgery (XSRF)
+Takes advantage of a website's trust in a user.\
+Steps of XSRF:
+  - Adversary forges a request for a fund transfer to a site
+  - Adversary embeds request in a link and sends it to users who may be logged in to site
+  - User clicks link, unintentionally sending request to site
+  - Site validates request and transfers funds from the visitor's accound to the adversary
+## Timing Attacks
+  - Physical Access: Gain access to a location before security requirements are verified
+  - Race Conditions: Technical in nature. Revolve around technical timing exploits
+  - TOC/TOU: Time of Check/Time of Use
+  - Replay Attacks: Traffic is captured and then used again later
+  - Error Handling: Error messages should not give the user *too* much information as it can give the attacker a target
+## Memory Issues
+  - Integer Overflow: An integer overflow is when a provided value is out of the expected range
+  - Buffer Overflow: More entries are provided than expected, resulting in memory that is beyond the size of the buffer being accessed
+  - Memory Leak: Application does not release memory in its intended way\
+Input validation is *vital* to ensure the memory safety of applications.
