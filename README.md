@@ -6,7 +6,7 @@ In social engineering, there are many different forms of attacks. These specific
 Phishing is a broad term used to describe **an attacker sending a text or email containing a link that tries to coerce the user into entering personal information for the attacker to steal**. When dealing with possible phishing attacks, it is important to be on the lookout for the following things:
   - Graphics that are slightly "off"
   - Pretexting: An attacker trying to create a situation that will coerce you into clicking the link. ("Your debit card has been charged $500! Click this link to contest the payment.")
-  - Use of typosquatting: An attacker using www[.]google[.]co**n** instead of www[.]google[.]com
+  - Use of typo-squatting: An attacker using www[.]google[.]co**n** instead of www[.]google[.]com
   - Email header: Ensure the person that has sent the email is known or from a trusted background.
 ### Pharming Attacks
 Pharming is a social engineering **attack where a legit website is redirected to a bogus site**. This is usually done through either a poisoned DNS server or a vulnerability on the client side. This form of attack is often combined with phishing to harvest credentials from a large group of people. It is very difficult for anti-malware to stop and often appears completely legit to the users.
@@ -110,7 +110,7 @@ Password hashes are stored in protective memory on our systems. There could be n
 Input validation is *vital* to ensure the memory safety of applications.
 ## Indicators for Application Attacks
 ### Code Injection
-Input validatoin and sanitization are vital in applications. Weak handling of inputs can lead to:
+Input validation and sanitization are vital in applications. Weak handling of inputs can lead to:
   - SQL Injection
   - DLL Injection
   - LDAP Injection
@@ -123,21 +123,21 @@ Input validatoin and sanitization are vital in applications. Weak handling of in
 ### Cross-Site Attacks
 Steps with example scenarios:
 #### Cross-Site Scripting (XSS)
-Takes advantage of a user's trust in a website.\
-Steps of Persistent XSS Attack:
+Takes advantage of a user's trust in a website.
+###### Steps of Persistent XSS Attack:
   - Adversary finds a site vulnerable to script injection
   - Adversary injects site with malicious script that steals user's session cookies
   - User activates malicious script each time they access the site
-  - User's session cookie is sent to the adversary\
-Steps of Reflective XSS Attack (Non-Persistent):
-  - Adversary sends URL with malicious string to user
-  - User tricked into opening link and requesting malicious URL from site
-  - Site includes malicious string in its response to user
-  - User's browser interprets malicious script as part of the legitimate webpage and executes the code\
+  - User's session cookie is sent to the adversary
+###### Steps of Reflective XSS Attack (Non-Persistent):
+1. Adversary sends URL with malicious string to user
+2. User tricked into opening link and requesting malicious URL from site
+3. Site includes malicious string in its response to user
+4. User's browser interprets malicious script as part of the legitimate webpage and executes the code
 #### Cross-Site Request Forgery (XSRF)
-Takes advantage of a website's trust in a user.\
-Steps of XSRF:
-  - Adversary forges a request for a fund transfer to a site
-  - Adversary embeds request in a link and sends it to users who may be logged in to site
-  - User clicks link, unintentionally sending request to site
-  - Site validates request and transfers funds from the visitor's accound to the adversary
+Takes advantage of a website's trust in a user.
+###### Steps of XSRF:
+1. Adversary forges a request for a fund transfer to a site
+2. Adversary embeds request in a link and sends it to users who may be logged in to site
+3. User clicks link, unintentionally sending request to site
+4. Site validates request and transfers funds from the visitor's account to the adversary
