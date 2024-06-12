@@ -47,6 +47,26 @@ Attackers often spend time gathering info on the specific victim. They will look
 When a target is specifically chosen for a phishing attack, it is often referred to as **Spear Phishing**. Spear Phishing of a high profile target with higher levels of access (such as a CEO or CFO since these targets would have direct access to the corporate bank account) is referred to as **Whaling**.\
 Prepending, in the context of spam and phishing, is when the sender adds information to the message to legitimize it (A common example being adding "Re: " to the subject line to make the email appear as a reply).
 ## Indicators of Attacks
+### Threat Actors
+-  State-sponsored Attacks: North Korea, China, Russia
+  -  APT (Advanced Persistent Threats)
+-  Internal Threats:
+  -  80% of all fraud is initiated from within the organization
+  -  $2/3$ of security-related incidents from within are unintentional
+### Attack Vectors
+A means of creating a compromise and accessing a system.
+-  Direct access
+-  Backdoor software
+-  Email
+-  Gaining information from source like social media, keyloggers, etc
+#### Cyber Kill Chain
+1.  Reconnaissance: Attacker researches target network and attempts to identify vulnerabilities
+2.  Weaponization: The attacker either adapts an existing remote access malware weapon or creates a new one, tailored to one or more vulnerabilities identified in the previous step
+3. Delivery: The attacker transmits the weapon to the target (e.g., via email, attachments, links to malicious websites, or USB drives)
+4. Exploitation: The malware weapon triggers, which takes action on the target to exploit one or more vulnerabilities and compromise the host
+5. Installation: The malware weapon installs an access point (such as a backdoor) usable by the attacker
+6. Command and Control: The malware enables the attacker to have "hands on the keyboard" persistent access to the target network
+7. Actions and Objective: The attacker takes actions to achieve their goals, such as data exfiltration, data destruction, or encryption for ransom
 ### Threat Vectors
   - Viruses: Usually require a host file and user interaction
     - Fileless viruses do not need a host
@@ -108,6 +128,45 @@ Password hashes are stored in protective memory on our systems. There could be n
   - Buffer Overflow: More entries are provided than expected, resulting in memory that is beyond the size of the buffer being accessed
   - Memory Leak: Application does not release memory in its intended way\
 Input validation is *vital* to ensure the memory safety of applications.
+### Network-based Attacks
+-  Port Scanning
+-  Xmas Scans: Sends a packet with all flags set with a combination normal conversation never uses - can be used to determine operating system and open ports
+-  Man-in-the-middle: Attacker inserts himself into a communication path
+  -  Passive: Sniffing
+  -  Active: Session hijacking
+- Fuzzing: Attempting to inject code in vulnerable applications. Can be used for software penetration testing also
+-  Banner grabbing: Some network services return information in response to a service request
+#### Spoofing
+-  IP spoofing
+-  MAC spoofing/Cloning
+-  Email spoofing
+-  Caller ID spoofing
+-  Smurf attack
+-  Fraggle attack
+#### Redirection
+-  ARP: Address Resolution Protocol
+  -  Poisoning
+-  DNS
+  -  Rogue Infrastructure
+  -  Poisoning
+  -  Pharming
+  -  Hosts file
+- URL redirection
+#### Wifi Attacks
+-  Wardriving/Warchalking
+-  Encryption
+-  Sniffing:
+  -  WEP
+  -  WPA
+  -  WPA II
+-  WPS attacks
+-  Rogue Access Points/Evil Twins
+-  Dissociation/Deauthentication
+-  Jamming
+#### Bluetooth
+-  Bluejacking
+-  Bluesnarfing
+-  Bluebugging
 ## Indicators for Application Attacks
 ### Code Injection
 Input validation and sanitization are vital in applications. Weak handling of inputs can lead to:
@@ -141,3 +200,4 @@ Takes advantage of a website's trust in a user.
 2. Adversary embeds request in a link and sends it to users who may be logged in to site
 3. User clicks link, unintentionally sending request to site
 4. Site validates request and transfers funds from the visitor's account to the adversary
+## Security Assessments
