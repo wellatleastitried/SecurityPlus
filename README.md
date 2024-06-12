@@ -11,13 +11,13 @@ Phishing is a broad term used to describe **an attacker sending a text or email 
 ### Pharming Attacks
 Pharming is a social engineering **attack where a legit website is redirected to a bogus site**. This is usually done through either a poisoned DNS server or a vulnerability on the client side. This form of attack is often combined with phishing to harvest credentials from a large group of people. It is very difficult for anti-malware to stop and often appears completely legit to the users.
 ### Vishing
-Vishing, similar to phising, is a way for an attacker to get credentials from the target by coercing the information out of them. However, unlike phishing, this is done over the phone or voicemail instead of through a text or email. In these attacks, called ID spoofing is extremely common so it can be hard to determine whether the number is real or fake. These calls can be masked as anything, whether it be security checks or even bank updates. One of the most important things to remember about vishing prevention is that you should never give personal information to someone who calls **you**. If you need to give information over the phone, make sure that you are calling **them** or, at the *very* least, double check the caller to try and verify who you are talking to.
+Vishing, similar to phishing, is a way for an attacker to get credentials from the target by coercing the information out of them. However, unlike phishing, this is done over the phone or voicemail instead of through a text or email. In these attacks, called ID spoofing is extremely common so it can be hard to determine whether the number is real or fake. These calls can be masked as anything, whether it be security checks or even bank updates. One of the most important things to remember about vishing prevention is that you should never give personal information to someone who calls **you**. If you need to give information over the phone, make sure that you are calling **them** or, at the *very* least, double check the caller to try and verify who you are talking to.
 ### Smishing
 Smishing is a subset of phishing that is done over specifically SMS. Similar to vishing, spoofing the number the text is being sent from is extremely common.
 ### Hoaxes
 Hoaxes are situations that are created by the attacker that assist in persuading the intended target to perform an action that they might not otherwise do. These situations can range from the promises of financial gain to the attacker convincing the user to delete or move important files because they are "not safe." Hoaxes are *usually* used to waste time, but they can also be more malicious.
 ### Identity Fraud
-Using information (which is often times obtained through other forms of social enginnering attacks) to present yourself to be someone else (usually someone with higher clearance or status).
+Using information (which is often times obtained through other forms of social engineering attacks) to present yourself to be someone else (usually someone with higher clearance or status).
 ### Shoulder Surfing
 Shoulder surfing is when an attacker watches their target enter personal information into their device for the sole purpose of learning their credentials. This is more common than you may think and can happen anywhere, whether it be coffee shops, airports, banks, or even someone looking with binoculars from a building over. To help mitigate the likelihood of this happening:
   - Pay attention to your surroundings
@@ -29,7 +29,7 @@ Spam is when someone sends unrequested bulk messages in large quantities. The mo
 ### Spim
 Spim is the same concept as spam with the difference of the messages being sent over text.
 ### Bluejacking
-Bluejacking is the term used to define spam that is sent over bluetooth connections.
+Bluejacking is the term used to define spam that is sent over Bluetooth connections.
 ### Watering Hole Attack
 A watering hole attack is when malware is injecting through an insecure, frequently used third party. If an attacker is unable to gain access to Company A's network, but they know that employees of Company A frequently visit Company B's website, the attacker can inject Company B's website with malware so that the employees of Company A that visit this site get infected.
 ### Tailgating
@@ -97,6 +97,17 @@ One of the biggest mistakes that can be made when configuring a server is to hav
   - Downgrade Attacks: Requests access to the server at a lower level of security than the default in hopes that passwords would be transmitted in a less secure manner.
 ### Pass the Hash
 Password hashes are stored in protective memory on our systems. There could be numerous hashes stored in the memory, for example, the current user, remote users, or service accounts. If these hashes are accessed by an attacker (who would need root privileges to do so), the attacker may be able to exploit the SSO authentication to use the hashes elsewhere to authenticate. It is important that users should not have debug privileges or be administrators (root) on their local machines.
+### Timing Attacks
+  - Physical Access: Gain access to a location before security requirements are verified
+  - Race Conditions: Technical in nature. Revolve around technical timing exploits
+  - TOC/TOU: Time of Check/Time of Use
+  - Replay Attacks: Traffic is captured and then used again later
+  - Error Handling: Error messages should not give the user *too* much information as it can give the attacker a target
+### Memory Issues
+  - Integer Overflow: An integer overflow is when a provided value is out of the expected range
+  - Buffer Overflow: More entries are provided than expected, resulting in memory that is beyond the size of the buffer being accessed
+  - Memory Leak: Application does not release memory in its intended way\
+Input validation is *vital* to ensure the memory safety of applications.
 ## Indicators for Application Attacks
 ### Code Injection
 Input validatoin and sanitization are vital in applications. Weak handling of inputs can lead to:
@@ -130,14 +141,3 @@ Steps of XSRF:
   - Adversary embeds request in a link and sends it to users who may be logged in to site
   - User clicks link, unintentionally sending request to site
   - Site validates request and transfers funds from the visitor's accound to the adversary
-## Timing Attacks
-  - Physical Access: Gain access to a location before security requirements are verified
-  - Race Conditions: Technical in nature. Revolve around technical timing exploits
-  - TOC/TOU: Time of Check/Time of Use
-  - Replay Attacks: Traffic is captured and then used again later
-  - Error Handling: Error messages should not give the user *too* much information as it can give the attacker a target
-## Memory Issues
-  - Integer Overflow: An integer overflow is when a provided value is out of the expected range
-  - Buffer Overflow: More entries are provided than expected, resulting in memory that is beyond the size of the buffer being accessed
-  - Memory Leak: Application does not release memory in its intended way\
-Input validation is *vital* to ensure the memory safety of applications.
