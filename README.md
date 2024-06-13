@@ -201,3 +201,50 @@ Takes advantage of a website's trust in a user.
 3. User clicks link, unintentionally sending request to site
 4. Site validates request and transfers funds from the visitor's account to the adversary
 ## Security Assessments
+### Vulnerability Management Activities
+- A common way to identify technical vulnerabilities use a vulnerability scanner
+  - Nikto
+  - Nessus
+  - Critical components of a vulnerability scanner:
+    - Credentials: can scan with or without user credentials
+      - Uncredentialled scan: non-credentialed scans, do not get trusted access to the systems they are scanning
+      - Credentialed scan: require logging in and provide access to resources an untrusted user would not have
+    - Agent/Agentless: can be run without an agent or be configured to run with agents installed on the local devices
+    - Intrusive/Non-intrusive: Non-intrusive scans identify a vulnerability and report on it. Intrusive scans attempt to exploit a vulnerability
+- Patch management is a way to manage software vulnerabilities
+  - Identify missing updates or patches for the devices on your network
+    - **Not just for operating systems:** devices such as firewalls and switches have firmware updates
+  - Install missing patches to keep systems fully up-to-date and secure
+- Performing a risk assessment will help you to find areas that perhaps you didn't consider as being vulnerable
+- Vulnerability Information Sources:
+  - Advisories: specific data on an identified vulnerability
+  - Bulletins: summaries/newsletter listings of advisories
+  - Information Sharing and Analysis Centers (ISACs): non-profit groups that specialize in a specific sector
+  - News Reports: news articles or headlines
+- Security Content Automation Protocol (SCAP): A suite of interoperable specs designed to standardize the naming conventions and formatting used to identify and report on software flaws. Made up of open standards to enumerate software flaws and security related configuration issues.
+  - Languages Include:
+    - Open Vulnerability and Assessment Language (OVAL): Provides a way to collect and assess three main aspects of evaluated systems: system information, machine state, reporting
+    - Asset Reporting Format (ARF): correlates reporting formats to device information
+    - Extensible Configuration Checklist Description Format (XCCDF): Written in XML to provide a consistent way to define benchmarks and checks performed during assessments
+  - Identification Schemes:
+    - Common Platform Enumeration (CPE): standardized naming format to identify systems and software
+    - Common Vulnerabilities and Exposures (CVE): lists of known vulnerabilities. Format is CVE-YEAR-XXXX
+    - Common Configuration Enumeration (CCE): Similar to CVE but focuses on configuration issues that may lead to a vulnerability
+- Honeypots:
+  - Deployment:
+    - Pseudo Flaw: Loophole purposely added to operating system or application to trap intruders
+    - Sacrificial lamb system on the network
+    - Administrators hope that intruders will attack this system instead of their production systems
+    - It is enticing because many ports are open and services are running
+  - Be careful of Enticement vs Entrapment
+- Log Reviews
+  - Examination of system log files to detect security events or to verify the effectiveness of security controls
+  - Ensure that time is standardized across all networked devices
+- Syslog:
+  - A standard network-based logging protocol that works on a wide variety of different types of devices and applications, allowing them to send text-formatted log messages to a central server
+- Security Information and Event Managers:
+  - Systems that enable the centralization, correlation, and retention of event data in order to generate automated alerts
+  - Also useful for forecasting and trend analysis
+## Threat Intelligence
+
+## Penetration Testing
