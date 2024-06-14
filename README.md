@@ -246,5 +246,53 @@ Takes advantage of a website's trust in a user.
   - Systems that enable the centralization, correlation, and retention of event data in order to generate automated alerts
   - Also useful for forecasting and trend analysis
 ## Threat Intelligence
-
+- Strategic Intelligence is non-technical, high-level information that can be used by senior management to make security decisions
+- Operational intelligence focuses on adversaries and their actions
+- Tactical intelligence focuses on immediate, specific threats and the evidence which can be used to detect them
+- Counterintelligence is an active security strategy that uses intelligence offensively
+- Intelligence source types:
+  - Open-source intelligence (OSINT)
+  - Closed-source intelligence/proprietary intelligence
+- Threat intelligence organizations:
+  - Computer Emergency Response Teams (CERT)
+  - Information Sharing and Analysis Center (ISAC)
+  - MITRE
+- Threat awareness:
+  - Known threats:
+    - Long-established threats can still be potent against weak security or if a new attack variant emerges
+  - Current vulnerabilities:
+    - Documented vulnerabilities in hardware, software, or procedures are continually changing, so you must remain aware of them
+  - Trending attacks:
+    - Attackers frequently adopt new strategies as defenses and vulnerabilities change
+  - Emerging threat sources
+  - Ongoing changes in technologies and business practices can affect both individual attacks and the security landscape
+  - Zero-day vulnerabilities
+  - Newly discovered vulnerabilities are an especially dangerous threat
+- Intelligence gathering:
+  - Define intelligence requirements - the goals and priorities for intelligence gathering
+  - Collect and process information that is likely to meet your requirements
+  - Analyze processed information to turn it into actionable intelligence
+  - Disseminate intelligence to the decision-makers who can act on it according to organizational policies
+  - Generate feedback to improve the next round of the cycle
+- Threat hunting:
+  - Threat hunting uses threat intelligence to develop hypotheses and analytics based on what threat actors are known to do so that threats can be proactively found rather than passively detected
+  - Advisories and bulletins: information released by vendors and researchers about new TTPs (Tactics, Techniques, and Procedures) and vulnerability information
+- Cybersecurity information sources:
+  - Social media
+  - Vendor websites
+  - Academic journals
+  - Conferences
+  - Threat actor activities
+  - Request for comments (RFC)
+- Threat Intelligence sources:
+  - Data repositories
+  - Vulnerability feeds
+  - Threat intelligence feeds
+  - Threat maps
+  - Predictive analysis
+- Threat indicators:
+  - Reputational indicator: An indicator of attack (IoA) that is associated with a known or likely threat source
+  - Behavioral indicator: An IoA associated with a known suspected action performed by attackers
+  - Indicators of Compromise: A piece of forensic data which is associated with malicious activity on a system or network
+  - Vulnerability: A weakness in a system or network which can be exploited by a threat actor
 ## Penetration Testing
