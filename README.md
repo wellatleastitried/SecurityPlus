@@ -69,11 +69,15 @@ A means of creating a compromise and accessing a system.
 7. Actions and Objective: The attacker takes actions to achieve their goals, such as data exfiltration, data destruction, or encryption for ransom
 ### Threat Vectors
   - Viruses: Usually require a host file and user interaction
-    - Fileless viruses do not need a host
+    - File-less viruses do not need a host
   - Worms: A memory resident type of malware that can self-propagate and does not need a host file
   - Trojans: Present themselves as a desirable application or tool, yet contain malware
-  - PUPs/PUAs (Potentially Unwanted Programs/Applications): Software that is installed in addition to the app the user has chosen. Sometimes called grayware, as it is not always malicious
+  - PUPs/PUAs (Potentially Unwanted Programs/Applications): Software that is installed in addition to the app the user has chosen. Sometimes called gray-ware, as it is not always malicious
   - Other threat classifications can be determined by the payload. (A RAT, a Remote Access Trojan, can be delivered by a Trojan)
+### Command Line Tools
+TODO
+### Attack Frameworks
+TODO
 ### Unauthorized Access
   - Backdoor: Network software that opens a port on the compromised system. The host then "listens" for traffic on that port and allows access to the system, bypassing all of the installed authentication methods
   - RATs: A type of backdoor software that allows covert administrative access to a system
@@ -82,7 +86,7 @@ A means of creating a compromise and accessing a system.
   - Command and Control (C2 or C&C): Host or network that communicates with the exploited hosts
   - Rootkit: Operates at executive level (root or administrator depending on OS) or can be used to escalate privileges
 ### Ransomware
-Computer-based attack that allows the attacker to extort money from the target. Usually displays a message on the compromised machine telling the target to pay a specified sum of money to fix their compromised machine. These attacks use cryptomalware, which encrypts critical systems or files and requires the user to pay a fee or ransom in exchange for the key to decrypt their data.
+Computer-based attack that allows the attacker to extort money from the target. Usually displays a message on the compromised machine telling the target to pay a specified sum of money to fix their compromised machine. These attacks use crypto-malware, which encrypts critical systems or files and requires the user to pay a fee or ransom in exchange for the key to decrypt their data.
 ### Logic and Time Bombs
 **Not all malware runs immediately**
   - Time Bombs wait until a specific date or time to unleash their payload
@@ -296,3 +300,101 @@ Takes advantage of a website's trust in a user.
   - Indicators of Compromise: A piece of forensic data which is associated with malicious activity on a system or network
   - Vulnerability: A weakness in a system or network which can be exploited by a threat actor
 ## Penetration Testing
+Active, potentially intrusive process of simulating attacks on a network
+- Penetration testing uses a set of procedures and tools designed to test and possible bypass the security controls of a system
+- Goal is to measure an organization's level of resistance to an attack and to uncover any weaknesses within the environment
+- Emulates the same methods attackers would use
+- Penetration testing should only be conducted with senior management's approval in writing (it's only ethical hacking if it's authorized)
+- Degrees of knowledge:
+  - Zero knowledge (Black box): The penetration testing team does not have any knowledge of the target and must start from ground zero
+  - Partial knowledge (Grey box): The penetration testing team has some information about the target
+  - Full knowledge (White box): The team has intimate knowledge of the target
+  - Blind test: Defenders are not aware the testing is happening
+  - Double-blind: Blind test to the assessors and network security staff is not notified
+  - Targeted test: Focused test on specific areas of interest. For example, before a new application is rolled out, the team might test it for vulnerabilities before installing it into production
+Three basic requirements:
+- Meet with senior management to determine the goal of the assessment
+- Document rules of engagement
+  - Specific IP addresses/ranges to be tested
+    - Any restricted hosts
+  - A list of acceptable testing techniques
+  - Times when testing is to be conducted
+  - Points of contact for the penetration testing team, the target systems, and the networks
+  - Measures to prevent law enforcement being called with false alarms
+  - Handling of information collected by penetration testing team
+- Get sign off from senior management
+## Security Concepts in the Enterprise
+TODO
+## Virtualization
+TODO
+## Cloud Computing
+TODO
+## Data Security in the Cloud
+TODO
+## Secure Application Development and Deployment
+TODO
+## Identity and Access Management
+TODO
+## Resiliency
+TODO
+## Redundancy of Data and Staff
+TODO
+## Business Continuity and Disaster Recovery Planning
+TODO
+## Hardening Systems
+TODO
+## Mobile Devices
+TODO
+## Embedded Systems
+TODO
+## Physical Security
+TODO
+## Cryptography
+TODO
+## Ports and Protocols
+TODO
+## Network Connectivity Devices
+TODO
+## Switching Concerns
+TODO
+## Routing
+TODO
+## Firewalls
+TODO
+## Additional Security Devices
+TODO
+## VPNs
+TODO
+## Wireless Configuration
+TODO
+## Authentication
+TODO
+## Crossover Error Rate
+TODO
+## Single Sign On
+TODO
+## Authorization and Access Control Model
+TODO
+## Incident Response
+TODO
+### Mitigation Techniques
+TODO
+### Forensics
+TODO
+### Chain of Custody and Order of Volatility
+TODO
+## Governance Risk and Compliance
+### Frameworks and Standards
+TODO
+### Organizational Policies
+TODO
+### Information Security Risk Management
+TODO
+#### Risk Management Lifecycle
+TODO
+#### Risk Assessments
+TODO
+#### Risk Mitigation and Monitoring
+TODO
+#### Classification of Sensitive Data
+TODO
