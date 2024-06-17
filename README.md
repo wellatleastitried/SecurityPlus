@@ -324,7 +324,34 @@ Three basic requirements:
   - Handling of information collected by penetration testing team
 - Get sign off from senior management
 ## Security Concepts in the Enterprise
-TODO
+### Information Security Triad
+- Integrity: Assurance that data has not been modified
+- Availability: Timely access to resources
+- Confidentiality: Prevent unauthorized disclosures
+### Legal and Regulatory Requirements
+- Information security is the foundation of compliance with many laws regarding:
+  - Privacy
+  - Intellectual Property
+  - Contracts and Procurements
+  - Civil, Criminal, and Administrative laws and regulations
+- Information governance is accountable for compliance with these laws and regulations
+### Data Sovereignty
+- Laws vary across jurisdictions
+- Data sovereignty refers to the laws applicable to data because of the country in which it is physically located. The legal rights of data subjects and data protection requirements depend on the location in which their data is stored.
+  - Data localization: Refers to a governmental policy prohibiting organizations from transferring data outside a specific location. It is a special use case of data sovereignty
+  - Data residency: A decision by businesses to store data in a specific geographical location. Organizations might store data in a specific location to avoid legal requirements, take advantage of tax regimes, or for performance reasons. Once an organization chooses a location for its data, it is subject to data sovereignty - the laws applicable in that region.
+### Unauthorized Use
+- Ways to combat this:
+  - Strong authentication
+  - Encryption
+  - Obfuscation, anonymization, tokenization, and masking
+  - Organizational policies and layered defense
+### Masking, Obfuscation, Anonymization, and Tokenization
+- Obfuscation is the process of hiding, replacing, or omitting sensitive information.
+  - Masking is the process of using specific characters to hide certain parts of a specific dataset. For instance, displaying asterisks for all but the last 4 digits of SSN
+- Data Anonymization is the process of either encrypting or removing personally identifiable information from data sets so that the people whom the data describe remain anonymous
+- Tokenization: Public cloud service can be integrated and paired with a private cloud that stores sensitive data. The data send to the public cloud is altered and contains a reference to the data residing in the private cloud
+- Scoping: Limiting what is stored - the less I store, the less I have to protect
 ## Virtualization
 TODO
 ## Cloud Computing
