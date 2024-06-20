@@ -352,16 +352,78 @@ Three basic requirements:
 - Data Anonymization is the process of either encrypting or removing personally identifiable information from data sets so that the people whom the data describe remain anonymous
 - Tokenization: Public cloud service can be integrated and paired with a private cloud that stores sensitive data. The data send to the public cloud is altered and contains a reference to the data residing in the private cloud
 - Scoping: Limiting what is stored - the less I store, the less I have to protect
+### Exfiltration of Data
+- Attackers trying to extract data from their targets back to a machine controlled by the attacker
+- **Data Loss Prevention Systems (DLPS) work to prevent this**
 ## Virtualization
-TODO
+- Virtualization allows logical isolation on multi-tenant servers
+- Perfect environment for testing software
+- Uses snapshots for quick and easy backup/restores
+- Relies on the security of the Hypervisor
+- Could allow attackers to target relevant components and functions to gain unauthorized access to data/systems/resources
+### Hypervisor
+- Allows multiple OS to share a single hardware host, with the appearance of each host having exclusive use of resources
+- Type I Hypervisor runs directly on the hardware with VM resources provided by the Hypervisor
+  - Also referred to as "bare metal"
+  - VMWare ESXI, Citrix XenServer
+  - Hardware based
+- Type II Hypervisor runs on a host OS to provide virtualization services
+  - VMWare workstation, and MS VirtualPC
+  - Software based
+### Application Virtualization
+- Software is run on a server and is accessed by the client
+- When an application is virtualized, the application has been previously captured as a "package" and is dynamically accessed on target machines when it is needed
+- These virtual applications are the same applications that you might install on an operating system today, but thanks to virtualization and installation, configuration is no longer needed
+### Security Concerns with Virtualization
+- VM Escape
+- Single interface for entry
+- Physical redundancy
+- Anti-malware for hosts and guests
+- Unintentional bridging
 ## Cloud Computing
-TODO
+### Cloud Service Models
+- SaaS (Software as a service)
+  - SaaS provides the consumer the ability to use the provider's applications running on a cloud infrastructure. The applications accessible from various client devices through an interface like a web browser or a program interface
+- PaaS (Platform as a service)
+  - Provides the customer the capability to deploy onto the cloud infrastructure consumer-created or acquired applications created using programming languages, libraries, services, and tools supported by the provider
+- IaaS (Infrastructure as a service)
+  - The capability provided is to provision processing, storage, networks, and other fundamental computing resources where the consumer is able to deploy and run the software, including applications and operating systems. The consumer doesn't control the infrastructure but does control the OS, storage, deployed apps, and configuration settings
 ## Data Security in the Cloud
-TODO
+- Protecting data moving to and within the cloud
+  - SSL/TLS/IPSec
+- CASB (Cloud Access Security Brokers)
+  - An enterprise management tool to mediate access to cloud services by users of all types of devices
+    - Examples: Blue Coat, SkyHigh Networks, Microsoft Cloud App Security
+  - CASBs provide visibility into how clients and nodes are using cloud resources
+    - Single sign-on authentication from network to the cloud provider
+    - Scans for malware or non-compliant devices
+    - Monitors and audits user activities
+    - Limit data exfiltration by preventing access to unauthorized cloud resources
+- Protecting data in the cloud
+  - Encryption
+- Detection of data migration to the cloud
+  - CLP
+- Data dispersion
+  - Data is replicated in multiple physical locations across your cloud
+  - Used for higher availability
+- Data fragmentation
+  - Splitting a data set into smaller fragments (or shards) and distributing them across a large number of machines
+- Crypto-shredding 
+  - Renders data remnants in the cloud inaccessible
 ## Secure Application Development and Deployment
-TODO
-## Identity and Access Management
-TODO
+- Input Validation: Ensuring improper input is not allowed. It is especially well suited for the following vulnerabilities:
+  - Code injection
+  - Buffer overflow
+  - XSS
+  - XSRF
+  - **Fuzzing is a technique of testing an application's input validation**
+- Exception Handling: Errors should generate non-specific messages and ensure that no further security compromises happen
+### Identity and Access Management
+Defines the roles and access privileges of individual users and defines the processes for:
+- Identification
+- Authentication
+- Authorization
+- Accounting (Auditing)
 ## Resiliency
 TODO
 ## Redundancy of Data and Staff
