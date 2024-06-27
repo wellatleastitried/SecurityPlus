@@ -425,11 +425,62 @@ Defines the roles and access privileges of individual users and defines the proc
 - Authorization
 - Accounting (Auditing)
 ## Resiliency
-TODO
+- Redundant Spares:
+  - Redundant hardware
+  - Available in the event that the primary device becomes unusable
+  - Often associated with hard drives
+  - How, warm, and cold swapped devices
+  - SLAs
+  - MTBF (Mean Time Between Failure)
+  - MTTR (Mean Time to Repair)
+- RAID (Redundant Array of Independent Devices):
+  - RAID-0: Disk striping provides no redundancy or fault tolerance but provides performance improvement for read/write functions
+  - RAID-1: Disk Mirroring provides redundancy but is often considered to be the least efficient usage of space
+  - RAID-5: Disk Striping with Parity provides both fault tolerance and speed
+  - RAID-6: Disk Striping with 2 parity disks
+  - RAID-10 (RAID 0+1): Mirrored Stripe Set
+- UPS (Uninterruptible Power Supply):
+  - Issues to consider:
+    - Size of load UPS can support
+    - How long can it support this load (battery life)
+    - Speed the UPS takes on the load when the primary power source fails
+    - Physical space required
+  - Desirable features:
+    - Long battery life
+    - Remote diagnostic software
+    - Surge protection and line conditioning
+    - EMI/RFI filters to prevent data errors caused by electrical noise
+    - High MTBF values
+    - Allow for automatic shutdown of the system
+  - Primarily used to keep servers up until generators take over
 ## Redundancy of Data and Staff
-TODO
+### Backups
+- Full Backup:
+  - Archive bit is reset (Bit is set to 0)
+- Incremental backup:
+  - Backs up all files that have been modified since the last backup
+  - Archive bit is reset
+- Differential backup:
+  - Backs up all files that have been modified since the last full backup
+  - Archive bit is not reset
+- Copy backup:
+  - Same as full backup, but Archive bit is not reset
+  - Use before upgrades or system maintenance
+#### Issues
+- Identify what needs to be backed up first
+- Media rotation scheme:
+  - Grandfather, Father, Son
+  - Tower of Hanoi
+- Backup schedule needs to be developed
+- If restoring a backup after a compromise, ensure that the backup material does not contain the same vulnerabilities that were exploited
+### Staff
+- Eliminate single point of failure
+- Cross training
+- Job rotation
+- Training and education
 ## Business Continuity and Disaster Recovery Planning
-TODO
+- BCP (Business Continuity Planning): Focuses on sustaining operations and protecting the viability of the business following a disaster until normal business conditions can be restored. The BCP is an umbrella term that includes many other plans, including the DRP. Long Term focused. Error exception and handling
+- DRP (Disaster Recovery Planning): The goal is to minimize the effects of a disaster and to take the necessary steps to ensure that the resources, personnel, and business processes are able to resume operations in a timely manner. Deals with the immediate aftermath of the disaster and is often IT-focused. Short Term focused
 ## Hardening Systems
 TODO
 ## Mobile Devices
