@@ -75,9 +75,51 @@ A means of creating a compromise and accessing a system.
   - PUPs/PUAs (Potentially Unwanted Programs/Applications): Software that is installed in addition to the app the user has chosen. Sometimes called gray-ware, as it is not always malicious
   - Other threat classifications can be determined by the payload. (A RAT, a Remote Access Trojan, can be delivered by a Trojan)
 ### Command Line Tools
-TODO
+- ping/pathping:
+  - Uses ICMP
+  - Echoing utility that tests basic connectivity
+  - pathping indicates hops through routers also
+- tracert/traceroute:
+  - Echoing utility that verifies hops through routes
+  - Good tool to use when you can access local, but not remote hosts
+  - tracert is a Windows utility
+  - traceroute is a Linux/Unix utility
+- nslookup:
+  - DNS utilities
+  - Can be used to determine name resolution
+  - Can trigger a zone transfer for purposes of mapping a network
+  - nslookup is windows based
+  - DIG is Linux-based
+- ipconfig/ifconfig:
+  - ipconfig is Windows based and allows a user to view IP info about a host such as ('/all', '/displaydns', '/flushdns')
+  - ifconfig is Unix/Linux based with comparable functionality
+- iptables:
+  - iptables is a Linux firewall utility that uses policy to allow or block traffic
+- netstat:
+  - Provides live-time information on your network connections, as well as network statistics and the routing table
+- tcpdump:
+  - captures network packets, storing them in a file to be analyzed
+- nmap:
+  - Discovers hosts and services on a computer network. The utility sends packets and analyzes the responses. Included are features for probing computer networks - host, service, and operating system discovery
+- route:
+  - Used to display and manipulate a local routing table
+- arp (Address Resolution Protocol):
+  - Broadcast based
+  - Used to determine mapping of IP address to MAC addresses
+    - arp -a will allow a user to view the ARP cache
 ### Attack Frameworks
-TODO
+- MITRE ATT&CK Framework and Diamond Model:
+  - MITRE's ATT&CK (Adversarial Tactics, Techniques & Common Knowledge)
+  - Provides access to database of known TTPs (Tactics, Techniques, and Procedures)
+  - Diamond Model of Intrusion Analysis
+- Cyber Kill Chain
+  1. Reconnaissance: The attacker selects a target, researches it, and attempts to identify vulnerabilities in the target network
+  2. Weaponization: The attacker either adapts an existing remote access malware weapon or creates a new one tailored to one or more vulnerabilities identified in the previous step
+  3. Delivery: The attacker transmits the weapon to the target (e.g., via email attachments, links to malicious websites, or USB drives)
+  4. Exploitation: The malware weapon triggers, which takes action on the target to exploit one or more vulnerabilities and compromise the host
+  5. Installation: The malware weapon installs an access point (e.g. backdoor) usable by the attacker
+  6. Command and Control: The malware enables the attacker to have "hands on the keyboard" persistent access to the target network
+  7. Actions on Objective: The attacker takes actions to achieve their goals, such as data exfiltration, data destruction, or encryption for ransom
 ### Unauthorized Access
   - Backdoor: Network software that opens a port on the compromised system. The host then "listens" for traffic on that port and allows access to the system, bypassing all of the installed authentication methods
   - RATs: A type of backdoor software that allows covert administrative access to a system
@@ -106,7 +148,7 @@ One of the biggest mistakes that can be made when configuring a server is to hav
 ### Physical Security Threats
   - Malicious USB Cables: Can act as a skimmer over legitimate charging stations at public locations such as airports
   - Flash Drives: Can provide the means to distribute malware, as well as to remove sensitive information from the machine they are plugged into
-  - Card Cloning: Making mulitple copies of an existing card
+  - Card Cloning: Making multiple copies of an existing card
   - Skimming: Installing a counterfeit card reader over a legitimate device
 ### AI Data Poisoning
   - Tainted Traning Data for Machine Learning: AI systems "learn" based on data retrieved from customer systems and security devices like honeypots. By injecting code or traffic into the training environment, an attacker can corrupt the learning process, therefore rendering the AI software skewed.
@@ -481,48 +523,164 @@ Defines the roles and access privileges of individual users and defines the proc
 ## Business Continuity and Disaster Recovery Planning
 - BCP (Business Continuity Planning): Focuses on sustaining operations and protecting the viability of the business following a disaster until normal business conditions can be restored. The BCP is an umbrella term that includes many other plans, including the DRP. Long Term focused. Error exception and handling
 - DRP (Disaster Recovery Planning): The goal is to minimize the effects of a disaster and to take the necessary steps to ensure that the resources, personnel, and business processes are able to resume operations in a timely manner. Deals with the immediate aftermath of the disaster and is often IT-focused. Short Term focused
-## Hardening Systems
-TODO
-## Mobile Devices
-TODO
-## Embedded Systems
-TODO
-## Physical Security
-TODO
-## Cryptography
-TODO
 ## Ports and Protocols
-TODO
-## Network Connectivity Devices
-TODO
+### FTP
+- Standard network protocol used for transferring computer files
+- Build on a client-server architecture
+- **NOT SECURE**
+- Operates on TCP ports **20 and 21**
+- Can be encrypted through SSL/TLS or SSH
+  - If it is encrypted with SSH: port **22**
+  - If it is encrypted with TLS: port **989, 990**
+### SSH
+- Graphic network protocol
+- Used to go over unsecure networks
+- Includes remote command-line login and execution
+- Uses a client-server architecture
+- Two major versions: SSH-1 & SSH-2
+- Uses TCP port **22**
+- SCP and S/FTP both use SSH and therefore, also use port **22**
+### Telenet
+- Stands for Teletype Network
+- **NOT SECURE**
+- Used on the internet or a LAN
+- One of the first internet standards
+- It is used to establish a connection to TCP
+- Uses TCP port **23**
+### SMTP
+- Communication protocol for email transmission
+- Widely used today in email servers and other message transfer agents
+- Used to send and received emails; uses TCP
+- Uses port **25** and operates at the Application layer
+### Terminal Access Controller, Access Control System (TACACS+)
+- Separates the authentication, authorization, and accounting functions
+- Supports authorization of router commands on a per-user or per-group basis
+- Uses TCP and encrypts the entire body of the packet
+- Operates on TCP port **49**
+### Domain Name Service (DNS)
+- A naming system used by computers and services connected to the Internet
+  - Hierarchical and decentralized in structure
+- Associated domain names assigned to participating computers and services
+- Serves as the Phone Book for the internet by translating human-friendly hostnames into IP addresses
+- Operates on port **53**
+### Dynamic Host Configuration Protocol (DHCP)
+- A network management protocol used on IP networks
+- DHCP servers assign IP addresses and other network configuration parameters
+- Allows computers to request IP addresses
+- Without DHCP, IP addresses for network devices would need to be manually assigned
+- Operates on port **67, 68**
+### Trivial File Transfer Protocol (TFTP)
+- Simple, faster version of FTP that operates on port **69**
+### Hypertext Transfer Protocol (HTTP)
+- An application protocol
+- Used for distributive, collaborative, hypermedia information systems
+- Foundation of communication for the World Wide Web
+- Designed to permit network elements to improve or enable communications between clients and servers
+- Uses port **80** and operates on the Application layer
+### Post Office Protocol (POP)
+- Used when a client system downloads mail from the mail server
+- Uses port **110**
+### Network Time Protocol (NTP)
+- Used to synchronize network systems
+- Managing, securing, planning, and debugging requires accurate timing
+- Kerberos, particularly, requires time synchronization
+- Uses port **123**
+### Internet Mail Application Protocol (IMAP)
+- Alternative to POP
+- Used to download email from server
+- Uses port **143**
+### Simple Network Management Protocol (SNMP)
+- Agent-network devices contain SNMP agents
+- Central Manager: A manager or management system responsible for communicating with the SNMP agent-implemented network devices
+- Management Information Base (MIB): Every SNMP agent maintains an information database describing the managed device parameters. The SNMP manager uses this database to request the agent for specific information and further translates the information as needed for the Network Management System (NMS)
+- Uses port **161**
+- Only version 3 uses encryption to secure information
+### Lightweight Directory Access Protocol (LDAP)
+- Hierarchical structure used for Directory Services
+- Uses port **389 or 636** (Secure LDAP)
+### Hypertext Transfer Protocol Secure (HTTPS)
+- Uses SSL/TLS to provide secure transmission of information across the internet
+- Uses port **443**
+### Remote Authentication Dial-In User Services (RADIUS)
+- Provides Central Authentication for remote devices like dial-up, VPN, and Wi-Fi clients
+- Uses port **1812 and 1813** and operates at the Application layer
+### Remote Desktop Protocol (RDP)
+- Provides a user with a graphical interface to connect to another computer over a network connection
+- Uses port **3389**
 ## Switching Concerns
-TODO
+### VLAN Hopping
+- VLAN Hopping is an attack where the attacker can send traffic from one VLAN into another. There are two different methods to accomplish this:
+  - *Double tags*: The idea behind the attack is that the attacker is connected to an interface in access mode with the same VLAN as the native untagged VLAN on the trunk. The attacker sends a frame with two 802.1Q tags; the 'inner' VLAN tag is the VLAN we want to reach, and the 'outer' VLAN tag is the native VLAN. When the switch receives the frame, it will remove the first (native VLAN) 802.1Q tag and forward the frame with the second 802.1Q tag on its trunk interface(s). The attacker has now 'jumped' from the native VLAN to the victim's VLAN. It's a one-way trip, but it could be used perhaps for a DOS attack.
+  - *Switch Spoofing*: The attacker will send DTP packets and tries to negotiate a trunk with the switch; this is possible when you use the default 'dynamic auto' or 'dynamic desirable' switchport mode. Once you have a trunk to your computer, you can access all VLANs. This is a misconfiguration since you should never configure your interfaces to use the dynamic switchport modes.
 ## Routing
-TODO
+### Static Routing
+- Static routes are manually configured and maintained
+  - Route -add (Add route)
+  - Route -p (Make persistent)
+  - Route -print (Display routing table)
+- Best used in an environment that doesn't often change
+### Routing Protocols
+- Distance Vector
+  - RIP
+  - Routing by Rumor
+  - Count to Infinity
+  - Split Horizon
+  - Poison Reverse
+- Link State
+  - OSPF
+  - Link State Advertisements
+- Exterior Gateway Protocols
+  - BGP
+  - Used between Routing Domains
+  - Used on the internet between ISPs
+### Network Address Translation/Port Address Translation (NAT/PAT)
+- Advantages
+  - Allows you to use private addresses internally; you don't need to get real public IP addresses
+  - Allows the use of RFC 1918 IP addresses
+    - 10.x.x.x
+    - 172.6.x.x-172.31.x.x
+    - 192.168.x.x
+  - Hides internal network structure
+  - Transparent, doesn't require special software
+- Disadvantages
+  - Single Point of Failure/Performance Bottleneck
+  - Doesn't protect from bad content
 ## Firewalls
-TODO
-## Additional Security Devices
-TODO
-## VPNs
-TODO
-## Wireless Configuration
-TODO
-## Authentication
-TODO
-## Crossover Error Rate
-TODO
-## Single Sign On
-TODO
-## Authorization and Access Control Model
-TODO
-## Incident Response
-TODO
+- A fundamental requirement in Network security is to isolate trusted resources from untrusted entities
+- DMZ
+  - A buffer zone between an unprotected network and a protected network that allows for the monitoring and regulation of traffic between the two and regulation of traffic between the two
+    - Internet-accessible servers (bastion hosts) are placed in a DMZ between the Internet and the internal network
+- Forward Proxy:
+  - Inspects traffic from the internal network going out to the external network (for example, the internet)
+- Reverse Proxy:
+  - Inspects traffic from the external network (Internet) coming into the internal network
+## VPNS
+### IPSec
+- IPSec is an encapsulation framework. Tunnel vs. Transport mode dictates what portion of the IP Packet is to be encapsulated
+- Sub-Protocols:
+  - Authentication Header (AH): Provides integrity, authenticity, and non-repudiation through an Integrity Check Value (ICV). The ICV is run on the entire packet (header, data, trailer) except for particular fields in the header that are dynamic (like TTL, etc.). **No confidentiality**
+  - Encapsulating Security Payload (ESP): Provides authenticity and integrity through a MAC (no non-repudiation since a MAC is symmetric). The main service provided is *encryption*. ICV is run on payload only
+  - Internet Key Exchange (IKE): No security services. Just management of secure connection
+    - Oakley: Uses Diffie Hellman to agree upon a key
+    - Internet Security Association and Key Management Protocol (ISAKMP): Manages keys, security associations (SAs), and Security Parameters Index (SPI)
 ### Mitigation Techniques
-TODO
-### Forensics
-TODO
-### Chain of Custody and Order of Volatility
-TODO
+- Reconfigure Endpoint Security:
+  - Re-image to baseline
+  - Harden system
+  - Application allow or deny lists
+  - Quarantine if necessary
+- Configuration Changes:
+  - Firewall rules
+  - MDM
+  - DLP
+  - Content filter/URL filter
+  - Update or revoke certificates
+  - Isolation
+  - Containment
+  - Segmentation:
+    - SOAR
+      - Runbooks: Predefined procedures to achieve a specific outcome
+      - Playbooks: Predefined steps to perform to identify an issue
 ## Governance Risk and Compliance
 ### Frameworks and Standards
 TODO
