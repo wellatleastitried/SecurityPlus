@@ -681,18 +681,12 @@ Defines the roles and access privileges of individual users and defines the proc
     - SOAR
       - Runbooks: Predefined procedures to achieve a specific outcome
       - Playbooks: Predefined steps to perform to identify an issue
-## Governance Risk and Compliance
-### Frameworks and Standards
-TODO
-### Organizational Policies
-TODO
-### Information Security Risk Management
-TODO
-#### Risk Management Lifecycle
-TODO
-#### Risk Assessments
-TODO
-#### Risk Mitigation and Monitoring
-TODO
-#### Classification of Sensitive Data
-TODO
+## Digital Forensics
+- Computer Forensics: The discipline of using proven methods toward the collection, preservation, validation, identification, analysis, interpretation, documentation, and presentation of digital evidence
+- IOCE and SWGDE are two entities that provide forensics guidelines and principles as follows
+  - All forensic principles must be applied to digital evidence
+  - Evidence should not be altered as a result of collection
+  - If a person is to access original digital evidence, that person must be trained for such a purpose
+  - All activity relating to the seizure, access, storage, and transfer of digital evidence must be fully documented and available for review
+  - An individual is responsible for actions affecting digital evidence while that evidence is in their possession 
+  - Any entity responsible for seizing, accessing, storing, or transferring digital evidence is responsible for compliance with these principles
